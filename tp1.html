@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>TP1</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="tp1.css">
+    </head>
+    <body>       
+        <main class="card">
+            <form action="/buscar-ubi" method="post">
+                <h1 class="card-title">Ubicación</h1>
+                <div class="card-description">
+                    <div class="input-group">
+                        <label for="ubi">Nombre Ubicación</label>
+                        <input type="text" id="ubi" name="ubi" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lat">Latitud</label>
+                        <input type="number" id="lat" min="-90" max="90" step="any" name="lat" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="long">Longitud</label>
+                        <input type="number" id="long" step="any" min="-180" max="180" name="long" required>
+                    </div>
+                </div>
+                <button type="submit" class="card-btn">Abrir Ubicación</button>
+            </form>
+            <div id="contenedor-mapa">
+                <button id="btn-cerrar" type="button" aria-label="Cerrar mapa">✕</button>
+                <iframe id="iframe-mapa" loading="lazy"></iframe>
+            </div>
+        </main>
+    <script src="tp1.js"></script>
+    </body>
+</html>
